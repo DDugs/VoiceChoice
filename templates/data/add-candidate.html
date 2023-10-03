@@ -1,0 +1,73 @@
+<!-- add-candidates.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Add Candidates</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar --> 
+        <nav class="navbar">
+            <div class="logo">
+                <h1>VoiceChoice</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('admin') }}">Home</a></li>
+                <li><a href="{{ url_for('addelec') }}">Add Elections</a></li>
+                <li><a href="{{ url_for('editelec') }}">Edit Elections</a></li>
+            </ul>
+        </nav>
+        </header>
+    
+    <!-- Register Page Content -->
+    <main>
+        <section id="register" class="register-card">
+        <h1>Add Candidates Here:</h1> 
+        <form id="contact-form">
+            <div>
+         <!-- Textboxes -->
+            <div class="input-container">
+                <label for="name"><img src="{{ url_for('static', filename='images/user.png') }}" alt=""></label>
+                <input type="text" id="name" name="name" value="Name" readonly>
+            </div>
+            <div class="input-container">
+                <label for="desc"><img src="{{ url_for('static', filename='images/email.png') }}" alt=""></label>
+                <input type="text" id="desc" name="desc" value="Description" readonly>
+            </div>
+            <div class="input-container">
+                <label for="promise"><img src="{{ url_for('static', filename='images/email.png') }}" alt=""></label>
+                <input type="text" id="promise" name="promise" value="Promises" readonly>
+            </div>
+                <div class="input-container">
+                <label for="stood"><img src="{{ url_for('static', filename='images/state.png') }}" alt=""></label>
+                <input type="text" id="stood" name="stood" value="Stood From" readonly>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <input type="submit" id="register-button" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <!-- Footer Section -->
+            <p>&copy; 2023 VoiceChoice - All Rights Reserved</p>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://instagram.com/notdhruvmore?igshid=OGQ5ZDc2ODk2ZA==/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ig.png') }}" alt="">
+    
+            </a>
+            <a href="https://www.facebook.com/Dhruvgupta/" target="_blank">
+                <img src="{{ url_for('static', filename='images/fbk.png') }}" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/dhruv-vishesh-gupta-a98a84271/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ln.png') }}" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

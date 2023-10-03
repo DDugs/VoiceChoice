@@ -1,0 +1,87 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>VoiceChoice</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('addelec') }}">Add Elections</a></li>
+            <li><a href="{{ url_for('editelec') }}">Edit Elections</a></li>
+            <li><a href="{{ url_for('addcandidate') }}">Add Candidates</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        <section id="elections" class="admin-card">
+            <h1>Welcome Admin</h1>
+
+            <div class="center-label">
+                <p>You can Check the Statistics and Results Here:</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Results</th>
+                </tr>
+                <tr>
+                    <td>1000</td>
+                    <td>Hostel Election</td>
+                    <td><a href="{{ url_for('stats1000') }}">Results</a></td>
+                </tr>
+                <tr>
+                    <td>1001</td>
+                    <td>Gym Election</td>
+                    <td><a href="{{ url_for('stats1001') }}">Results</a></td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>College Election</td>
+                    <td><a href="{{ url_for('stats1002') }}">Results</a></td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>Club Election</td>
+                    <td><a href="{{ url_for('stats1003') }}">Results</a></td>
+                </tr>
+                <tr>
+                    <td>1004</td>
+                    <td>Sports Election</td>
+                    <td><a href="{{ url_for('stats1004') }}">Results</a></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer Section -->
+            <p>&copy; 2023 VoiceChoice - All Rights Reserved</p>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://instagram.com/notdhruvmore?igshid=OGQ5ZDc2ODk2ZA==/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ig.png') }}" alt="">
+    
+            </a>
+            <a href="https://www.facebook.com/Dhruvgupta/" target="_blank">
+                <img src="{{ url_for('static', filename='images/fbk.png') }}" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/dhruv-vishesh-gupta-a98a84271/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ln.png') }}" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

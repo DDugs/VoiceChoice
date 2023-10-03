@@ -1,0 +1,165 @@
+<!-- elections.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Elections</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>VoiceChoice</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Register Page Content -->
+    <main>
+        <section id="elections" class="election-card">
+            <h1>Elections</h1>
+
+            <div class="big-label">
+                <p>Ongoing Elections</p>
+            </div>
+
+            <div class="small-label">
+                <p>Choose an election from the list below:</p>
+            </div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Description</th>
+                    <th>State</th>
+                    <th>Vote</th>
+                </tr>
+                <tr class="clickable-row" data-href="{{ url_for('profile1000') }}">
+                    <td>1000</td>
+                    <td>Hostel Election</td>
+                    <td>01-10-2023</td>
+                    <td>01-10-2023</td>
+                    <td>Where you live</td>
+                    <td>Uttar Pradesh</td>
+                    <td><a href="{{ url_for('vote1000') }}">Vote</a></td>
+                </tr>
+                <tr class="clickable-row" data-href="{{ url_for('profile1001') }}">
+                    <td>1001</td>
+                    <td>Gym Election</td>
+                    <td>01-10-2023</td>
+                    <td>01-10-2023</td>
+                    <td>Where you work out</td>
+                    <td>Uttar Pradesh</td>
+                    <td><a href="{{ url_for('vote1001') }}">Vote</a></td>
+                </tr>
+                <tr class="clickable-row" data-href="{{ url_for('profile1002') }}">
+                    <td>1002</td>
+                    <td>College Election</td>
+                    <td>01-10-2023</td>
+                    <td>01-10-2023</td>
+                    <td>Where you study</td>
+                    <td>Uttar Pradesh</td>
+                    <td><a href="{{ url_for('vote1002') }}">Vote</a></td>
+                </tr>
+                <tr class="clickable-row" data-href="{{ url_for('profile1003') }}">
+                    <td>1003</td>
+                    <td>Club Election</td>
+                    <td>01-01-2024</td>
+                    <td>01-01-2023</td>
+                    <td>Where you learn new skills</td>
+                    <td>Uttar Pradesh</td>
+                    <td><a href="{{ url_for('vote1003') }}">Vote</a></td>
+                </tr>
+                <tr class="clickable-row" data-href="{{ url_for('profile1004') }}">
+                    <td>1004</td>
+                    <td>Sports Election</td>
+                    <td>01-02-2023</td>
+                    <td>01-02-2023</td>
+                    <td>Where you play different sports</td>
+                    <td>Uttar Pradesh</td>
+                    <td><a href="{{ url_for('vote1004') }}">Vote</a></td>
+                </tr>
+                {% for election in ongoing_elections %}
+                <tr>
+                    <td>{{ election.id }}</td>
+                    <td>{{ election.title }}</td>
+                    <td>{{ election.start_date }}</td>
+                    <td>{{ election.end_date }}</td>
+                    <td>{{ election.description }}</td>
+                    <td>{{ election.state }}</td>
+                    <td><a href="#">Vote</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            
+            <div class="big-label">
+                <p>Upcoming Elections</p>
+            </div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Description</th>
+                    <th>State</th>
+                    <th>Vote</th>
+                </tr>
+                {% for election in upcoming_elections %}
+                <tr>
+                    <td>{{ election.id }}</td>
+                    <td>{{ election.title }}</td>
+                    <td>{{ election.start_date }}</td>
+                    <td>{{ election.end_date }}</td>
+                    <td>{{ election.description }}</td>
+                    <td>{{ election.state }}</td>
+                    <td><a href="#">Vote</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var rows = document.querySelectorAll(".clickable-row");
+    
+                rows.forEach(function (row) {
+                    row.addEventListener("click", function () {
+                        var url = row.getAttribute("data-href");
+                        window.location.href = url;
+                    });
+                });
+            });
+        </script>
+
+    </main>
+
+    <footer>
+        <!-- Footer Section -->
+            <p>&copy; 2023 VoiceChoice - All Rights Reserved</p>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://instagram.com/notdhruvmore?igshid=OGQ5ZDc2ODk2ZA==/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ig.png') }}" alt="">
+    
+            </a>
+            <a href="https://www.facebook.com/Dhruvgupta/" target="_blank">
+                <img src="{{ url_for('static', filename='images/fbk.png') }}" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/dhruv-vishesh-gupta-a98a84271/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ln.png') }}" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

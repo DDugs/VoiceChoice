@@ -1,0 +1,93 @@
+<!-- 1000.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Profile | 2001</title>
+</head>
+<body>
+    <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>VoiceChoice</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="elections.html">Elections</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        <section id="register" class="profile-card">
+            <h1>MUN Elections</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Promises</th>
+                    <th>Stood From</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Dhruv Gupta</td>
+                    <td>He has done many times for the welfare of the students from the past 2 years</td>
+                    <td>All Rooms Will be Equiped with ACs</td>
+                    <td>Student Community</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Piyush Mohan</td>
+                    <td>Appointed in the year 2022 and from then he is been reviewing the fees structure of the Hostels</td>
+                    <td>Hostels fees will be reduced</td>
+                    <td>DSA Community</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Muskan Gupta</td>
+                    <td>She has been working for both boys and girls hostels from the past 4 years. She was the one who was responsible in installing new fans in every room</td>
+                    <td>No rent will be taken for extra fans or coolers</td>
+                    <td>DAA Community</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Kiran Bala</td>
+                    <td>From the Hostel Department she is the only one who is looking after both mess and the hostels</td>
+                    <td>It will be ensured that the rooms are cleaned on regular basis</td>
+                    <td>Hostel Department</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Tanya Kudaisya</td>
+                    <td>Appointed in the month of May'23, and from then her main motive is to install lift in every hostel</td>
+                    <td>Lift will be installed</td>
+                    <td>Architechture Department</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer Section -->
+            <p>&copy; 2023 VoiceChoice - All Rights Reserved</p>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://instagram.com/notdhruvmore?igshid=OGQ5ZDc2ODk2ZA==/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ig.png') }}" alt="">
+    
+            </a>
+            <a href="https://www.facebook.com/Dhruvgupta/" target="_blank">
+                <img src="{{ url_for('static', filename='images/fbk.png') }}" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/dhruv-vishesh-gupta-a98a84271/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ln.png') }}" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

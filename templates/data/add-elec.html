@@ -1,0 +1,120 @@
+<!-- register.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Add Elections</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar --> 
+        <nav class="navbar">
+            <div class="logo">
+                <h1>VoiceChoice</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('admin') }}">Home</a></li>
+                <li><a href="{{ url_for('editelec') }}">Edit Elections</a></li>
+                <li><a href="{{ url_for('addcandidate') }}">Add Candidates</a></li>
+            </ul>
+        </nav>
+        </header>
+    
+    <!-- Register Page Content -->
+    <main>
+        <section id="register" class="register-card">
+        <h1>Add Your Election Here:</h1> 
+        <form id="contact-form">
+            <div>
+         <!-- Textboxes -->
+            <div class="input-container">
+                <label for="title"><img src="{{ url_for('static', filename='images/user.png') }}" alt=""></label>
+                <input type="text" id="title" name="title" value="Title" readonly>
+            </div>
+            <div class="input-container">
+                <label for="desc"><img src="{{ url_for('static', filename='images/email.png') }}" alt=""></label>
+                <input type="text" id="desc" name="desc" value="Description" readonly>
+            </div>
+            <div class="start-label">
+                <p>Start Date:</p>
+            </div>
+            <div class="input-container">
+                <label for="start-date"><img src="{{ url_for('static', filename='images/dob.png') }}" alt=""></label>
+                <input type="date" id="start-date" name="start-date">
+            </div>
+            <div class="start-label">
+                <p>End Date:</p>
+            </div>
+            <div class="input-container">
+                <label for="end-date"><img src="{{ url_for('static', filename='images/dob.png') }}" alt=""></label>
+                <input type="date" id="end-date" name="end-date">
+            </div> 
+                <div class="input-container">
+                <label for="select-state"><img src="{{ url_for('static', filename='images/state.png') }}" alt=""></label>
+                <select id="select-state" name="select-state">
+                    <option value="">Select State/Union Territory</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <input type="submit" id="register-button" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <!-- Footer Section -->
+            <p>&copy; 2023 VoiceChoice - All Rights Reserved</p>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://instagram.com/notdhruvmore?igshid=OGQ5ZDc2ODk2ZA==/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ig.png') }}" alt="">
+    
+            </a>
+            <a href="https://www.facebook.com/Dhruvgupta/" target="_blank">
+                <img src="{{ url_for('static', filename='images/fbk.png') }}" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/dhruv-vishesh-gupta-a98a84271/" target="_blank">
+                <img src="{{ url_for('static', filename='images/ln.png') }}" alt="">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
