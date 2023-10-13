@@ -16,7 +16,7 @@ def index():
 def elections():
     # Sample data for elections, you can load this from your database
     elections_data = [
-        {"id": 2000, "title": "Student Election", "start_date": "01-10-2023", "end_date": "10-10-2023", "description": "Where you become the mentor for other students", "state": "Uttar Pradesh"},
+        {"id": 2000, "title": "Student Election", "start_date": "01-10-2024", "end_date": "10-10-2023", "description": "Where you become the mentor for other students", "state": "Uttar Pradesh"},
         {"id": 2001, "title": "MUN Election", "start_date": "01-11-2023", "end_date": "10-11-2023", "description": "Where you debate", "state": "Uttar Pradesh"},
         {"id": 2002, "title": "Food Election", "start_date": "01-12-2023", "end_date": "10-12-2023", "description": "Where you eat", "state": "Uttar Pradesh"},
     ]

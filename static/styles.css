@@ -892,6 +892,7 @@ tr:not(:first-child):hover {
     display: none;
 }
 
+
 /* Optional: Add hover effect */
 .add-photo label:hover {
     background-color: #ffffff; /* Change the hover background color */
